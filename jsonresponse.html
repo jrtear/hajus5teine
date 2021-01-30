@@ -27,9 +27,10 @@
 	var myArray = []
 	
 
+  var x = location.hostname;
 	$.ajax({
 		method:'GET',
-		url:'http://localhost/uus/json.php',
+		url:'json.php',
 		success:function(response){
 			myArray = response.data
 			buildTable(myArray)
