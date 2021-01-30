@@ -32,8 +32,8 @@
 		method:'GET',
 		url:'json.php',
 		success:function(response){
+			var obj = JSON.parse(response)
 			myArray = response
-			console.log(response)
 			buildTable(myArray)
 			console.log(myArray)
 		}
