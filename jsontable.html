@@ -1,0 +1,53 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+    th{ 
+        color:#fff;
+            }
+</style>
+
+
+<table class="table table-striped">
+    <tr  class="bg-info">
+        <th>Title</th>
+        <th>Description</th>
+        <th>Genre</th>
+        <th>Grade</th>
+        <th>Image</th>
+    </tr>
+
+    <tbody id="myTable">
+        
+    </tbody>
+</table>
+
+<script type="module">
+	var myArray = 
+	    [{"title":"Deadpool","description":"A wisecracking mercenary gets experimented on and becomes immortal but ugly, and sets out to track down the man who ruined his looks.","image":"mT0cFOVQ_400x400.jpg","genre":"Comedy","grade":"4"},
+	    {"title":"Parker(2013)","description":"A thief with a unique code of professional ethics is double-crossed by his crew and left for dead. Assuming a new disguise and forming an unlikely alliance with a woman on the inside, he looks to hijack the score of the crew's latest heist.","image":"parker.jpg","genre":"action","grade":"4"}]
+	
+	
+	buildTable(myArray)
+
+	
+
+	function buildTable(data){
+		var table = document.getElementById('myTable')
+
+		for (var i = 0; i < data.length; i++){
+			var row = `<tr>
+							<td>${data[i].title}</td>
+							<td>${data[i].description}</td>
+							<td>${data[i].genre}</td>
+							<td>${data[i].grade}</td>
+							<td>${data[i].image}</td>
+					  </tr>`
+			table.innerHTML += row
+
+
+		}
+	}
+
+</script>
