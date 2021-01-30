@@ -23,19 +23,18 @@
     </tbody>
 </table>
 
-<script type="module">
+<script type="">
 	var myArray = []
 	
 
   var x = location.hostname;
 	$.ajax({
 		method:'GET',
-		url:'json.php',
+		url:'json.json',
 		success:function(response){
-			var obj = JSON.parse(response)
-			myArray = response
-			buildTable(myArray)
-			console.log(myArray)
+			myArray=response.data
+			buildTable(response)
+			console.log(response)
 		}
 	})
 
