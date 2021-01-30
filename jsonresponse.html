@@ -33,6 +33,7 @@
 		url:'json.php',
 		success:function(response){
 			myArray = response.data
+			console.log(response)
 			buildTable(myArray)
 			console.log(myArray)
 		}
